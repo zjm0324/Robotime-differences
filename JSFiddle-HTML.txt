@@ -1,0 +1,67 @@
+<main class="game-shell">
+    <header class="hero">
+      <p class="eyebrow">HALLOWEEN CHALLENGE</p>
+      <h1>Spot the Difference</h1>
+      <p class="subtitle">Find 5 differences in each level. You can tap either picture.</p>
+    </header>
+
+    <section class="game-card" aria-live="polite">
+      <div class="topbar">
+        <div>
+          <span class="level-label" id="levelLabel">Level 1 of 4</span>
+          <h2 id="levelTitle">Midnight Tea Party</h2>
+        </div>
+        <div class="stats">
+          <span>Found <strong id="foundCount">0</strong>/5</span>
+          <span>Time <strong id="timer">00:00</strong></span>
+        </div>
+      </div>
+
+      <div class="level-dots" id="levelDots" aria-label="Level progress"></div>
+
+      <div class="pictures" id="pictures">
+        <figure class="picture" data-side="left">
+          <figcaption>ORIGINAL</figcaption>
+          <div class="image-stage">
+            <img id="leftImage" alt="Original picture" draggable="false">
+            <div class="markers" id="leftMarkers"></div>
+          </div>
+        </figure>
+        <figure class="picture" data-side="right">
+          <figcaption>CHANGED</figcaption>
+          <div class="image-stage">
+            <img id="rightImage" alt="Changed picture" draggable="false">
+            <div class="markers" id="rightMarkers"></div>
+          </div>
+        </figure>
+      </div>
+
+      <p class="message" id="message">Look closely and start searching!</p>
+
+      <div class="actions">
+        <button class="button button-secondary" id="resetButton" type="button">Restart</button>
+        <button class="button button-secondary" id="hintButton" type="button">Hint <span id="hintCount">3</span></button>
+        <button class="button button-primary" id="nextButton" type="button" disabled>Next Level</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="celebration" id="celebration" hidden>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+    <div class="celebration-card">
+      <div class="pumpkin">🎃</div>
+      <p class="eyebrow">CONGRATULATIONS!</p>
+      <h2>You Completed Every Level!</h2>
+      <p class="result-time">Your time: <strong id="finalTime">00:00</strong></p>
+      <button class="button button-primary" id="revealCouponButton" type="button">My Coupon Code</button>
+      <div class="coupon-reward" id="couponReward" hidden>
+        <p>Congratulations! You've earned a $5 ROBOTIME coupon.</p>
+        <span>Coupon code</span>
+        <div class="coupon-code-row">
+          <strong id="couponCode">HS0SDTMASCJV</strong>
+          <button class="copy-button" id="copyCouponButton" type="button">Copy Code</button>
+        </div>
+      </div>
+      <button class="button button-secondary" id="playAgainButton" type="button" hidden>Play Again</button>
+    </div>
+  </div>
